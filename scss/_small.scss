@@ -39,49 +39,50 @@ header figure.logo img {
 
 /* navigation */
 
+nav button {
+    margin: .2rem $gutter;
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: lighten($primaryColor, 45%);
+}
 
 nav {
-    background-color: $primaryColor;
-    margin-bottom: 0px;   
+    background-color: $primaryColor;;
+
 }
 
 nav ul {
-    margin: 0px; padding: 0px;
-}
-
-nav li {
-    float: left;
-    width: 25%;
     list-style-type: none;
-    text-align: center;
-    background-color: lighten($primaryColor, 20%);
-    border-left: 2px solid $primaryColor;
-    
+    padding: 0;
+    margin: 0;
 }
 
-nav li.active { 
-    background-color: lighten($primaryColor, 40%);
-    
-}
-
-nav a {
-    font-size: 1rem;
+nav ul li a{
     display: block;
-    padding: .8rem 0;
-    color: white;
-    text-align: center;
+    padding: .8rem $gutter;
     text-decoration: none;
+    color: white;
+    background-color: lighten($primaryColor, 20%);
+    border-top: 1px solid rgba(0,0,0,0.3);
+
 }
 
-nav a.active {
+nav ul li.active a { 
     font-weight: $heavyWeight;
     color: darken($primaryColor, 25%);
+    background-color: lighten($primaryColor, 40%)
+    
 }
 
-nav a:hover {
+nav ul li a:hover {
     background-color: darken($subColor, 10%);
-
 }
+
+nav ul.hide {
+    display: none;
+}
+
 
 /* main */
 main {
@@ -118,8 +119,7 @@ main div.story {
     grid-template-rows: auto;
     column-gap: 25px;
     row-gap: 25px;
-    justify-content: stretch;
-    margin: 2%;
+    margin: $gutter;
 
     figure:nth-child(1){
         grid-column: 1 / span 2;
@@ -141,12 +141,12 @@ div#footerWrapper {
 footer div.links {
     display: grid;
     grid-template-columns: 1fr;
-    margin: 2%;
+    margin: $gutter;
     
 }
 
 footer div.links .footerLink {
-    margin-left: 2%;
+    margin-left: $gutter;
     padding: 0px;
     h3 {
         font-size: 1.3rem;

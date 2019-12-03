@@ -337,39 +337,39 @@ header figure.logo img {
   margin: 10px 0 10px 0; }
 
 /* navigation */
+nav button {
+  margin: 0.2rem 2%;
+  background-color: transparent;
+  border: none;
+  font-size: 1.6rem;
+  color: #9fa7de; }
+
 nav {
-  background-color: #273070;
-  margin-bottom: 0px; }
+  background-color: #273070; }
 
 nav ul {
-  margin: 0px;
-  padding: 0px; }
-
-nav li {
-  float: left;
-  width: 25%;
   list-style-type: none;
-  text-align: center;
-  background-color: #4150bc;
-  border-left: 2px solid #273070; }
+  padding: 0;
+  margin: 0; }
 
-nav li.active {
+nav ul li a {
+  display: block;
+  padding: 0.8rem 2%;
+  text-decoration: none;
+  color: white;
+  background-color: #4150bc;
+  border-top: 1px solid rgba(0, 0, 0, 0.3); }
+
+nav ul li.active a {
+  font-weight: 700;
+  color: #060711;
   background-color: #8c95d7; }
 
-nav a {
-  font-size: 1rem;
-  display: block;
-  padding: .8rem 0;
-  color: white;
-  text-align: center;
-  text-decoration: none; }
-
-nav a.active {
-  font-weight: 700;
-  color: #060711; }
-
-nav a:hover {
+nav ul li a:hover {
   background-color: #c94411; }
+
+nav ul.hide {
+  display: none; }
 
 /* main */
 main {
@@ -398,7 +398,6 @@ main div.story {
   grid-template-rows: auto;
   column-gap: 25px;
   row-gap: 25px;
-  justify-content: stretch;
   margin: 2%; }
   main div.story figure:nth-child(1) {
     grid-column: 1 / span 2; }
@@ -435,22 +434,25 @@ footer div.copy {
   padding: 1rem; }
 
 @media only screen and (min-width: 600px) {
+  nav button {
+    display: none; }
+
+  nav ul.hide {
+    display: block; }
+
   nav ul {
-    padding-left: 2%; }
+    margin-left: 2%; }
 
-  nav li {
-    width: auto; }
+  nav ul li {
+    float: left; }
 
-  nav a {
-    padding: .5rem 1rem; }
+  nav ul li a {
+    border: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    padding: .8rem 1rem; }
 
   main div.story {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    column-gap: 25px;
-    row-gap: 25px;
-    justify-content: stretch; }
+    grid-template-columns: 1fr 1fr 1fr; }
     main div.story figure:nth-child(1) {
       grid-column: 1 / span 3; }
 
@@ -462,14 +464,8 @@ footer div.copy {
     max-width: 80rem;
     margin: auto; }
 
-  nav ul {
-    padding-left: 2%; }
-
-  nav li {
-    width: auto; }
-
-  nav a {
-    padding: .5rem 1rem; }
+  nav ul li a {
+    padding: .6rem 1rem; }
 
   main div.story {
     grid-template-columns: 1fr 1fr 1fr 1fr; }

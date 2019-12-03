@@ -17,12 +17,13 @@
         <figure class="logo">
             <img src="images/news.png" alt="logo">
         </figure>
-        <h1>Glacier National Park</h1>
-        <h2>Adventure of a Lifetime</h2>
+        <h1>K News</h1>
+        <h2>Keeping you informed</h2>
     </header>
 
     <nav class="clearfix">
-        <ul>
+        <button onclick="toggleMenu()">&#9776;</button>
+        <ul id="priNav" class="hide">
             <li><a href="#">Home</a></li>
             <li><a href="#">Opinion</a></li>
             <li class="active"><a href="index.html" class ="active">News</a></li>
@@ -108,6 +109,11 @@
      
     </footer>
     
+    <script>
+    function toggleMenu() {
+        document.getElementById("priNav").classList.toggle("hide");
+    }
+    </script>
     
 </body>
 </html>
