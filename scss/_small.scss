@@ -102,7 +102,7 @@ div.story figure img {
 
 figcaption {
     text-align: center;
-    padding-top: 5px;
+    padding-top: 10px;
 }
 
 main h1 {
@@ -114,21 +114,19 @@ main h1 {
 
 main div.story {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     column-gap: 25px;
     row-gap: 25px;
     justify-content: stretch;
-    padding-bottom: 2%; 
+    margin: 2%;
 
     figure:nth-child(1){
-        grid-column: 1 / span 3;
-        grid-row: 1 / span 2;
+        grid-column: 1 / span 2;
 
     }
 }
-
-
+  
 .clearfix:after {
     content: "";
     display: table;
@@ -139,10 +137,34 @@ div#footerWrapper {
     background-color: $subColor;
 }
 
-footer {
+
+footer div.links {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2%;
     
-    text-align: center;
-    padding: 1rem $gutter; 
+}
+
+footer div.links .footerLink {
+    margin-left: 2%;
+    padding: 0px;
+    h3 {
+        font-size: 1.3rem;
+        margin-bottom: .5rem;
+    }
+    p {
+       color: white; 
+        margin: .5rem 0 .5rem 0;
+    }
+}
+
+footer {
+    text-align: left;
     color: $primaryColor;
+}
+
+footer div.copy {
+    text-align: center;
+    padding: 1rem;
 }
 

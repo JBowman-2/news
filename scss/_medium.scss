@@ -1,0 +1,32 @@
+nav ul {
+    padding-left: $gutter;
+}
+
+nav li {
+    width: auto;
+}
+
+nav a {
+    padding: .5rem 1rem; 
+}
+
+main div.story {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 25px;
+    row-gap: 25px;
+    justify-content: stretch; 
+
+    figure:nth-child(1){
+        grid-column: 1 / span 3;
+
+    }
+}
+
+footer div.links {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+    
+    
+}

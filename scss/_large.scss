@@ -16,6 +16,26 @@ nav a {
     padding: .5rem 1rem; 
 }
 
+main div.story {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    figure:nth-child(1){
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 2;
+
+    }
+}
+
+
+footer div.links {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 25px;
+    
+}
+
+
+
+
 
 
 
