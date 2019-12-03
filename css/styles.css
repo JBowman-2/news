@@ -314,6 +314,8 @@ html {
 
 /* body */
 body {
+  padding: 0px;
+  margin: 0px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px; }
@@ -369,14 +371,24 @@ nav a:hover {
 
 /* main */
 main {
+  padding: 0px;
+  margin: 0px;
   background-color: #eeeded; }
 
-main h2 {
-  color: #2E80B3;
-  margin: 15px 0 5px 2%; }
+figure {
+  margin: 2%; }
 
-main p {
-  margin-left: 2%; }
+figure img {
+  width: 100%; }
+
+main div.story {
+  border: 4px solid red;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto; }
+  main div.story figure:nth-child(1) {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2; }
 
 .clearfix:after {
   content: "";
@@ -391,7 +403,7 @@ footer {
 
 @media only screen and (min-width: 900px) {
   header, nav, main, footer {
-    max-width: 75rem;
+    max-width: 80rem;
     margin: auto; }
 
   nav ul {
